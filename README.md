@@ -5,4 +5,5 @@
 </p>
 <h3>Ports and Adapters</h3>
 <p>Ports sao interfaces e Adapters sao implementacoes.</p>
+<p>A interface e injetada em que esta começando a consumir</p>
 
