@@ -7,3 +7,17 @@
 <p>Ports sao interfaces e Adapters sao implementacoes.</p>
 <p>A interface e injetada em que esta começando a consumir</p>
 
+<h3>Exemplo1 projeto arquiteturamodelo</h3>
+<p>No projeto arquiteturamodelo foi criado o pacote entrypoint que representa o Driver Side, ou seja o lado que vai receber requisicoes para consumir a aplicacao. Abaixo temos como ficou a essa parte da arquitetura:
+
+<u>
+  <li>entrypoint
+    <ul>
+      <li>controller</li>
+      <li>dto</li>
+    </ul>
+  </li>
+</ul>
+
+</p>
+
