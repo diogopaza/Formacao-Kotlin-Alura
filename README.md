@@ -6,6 +6,7 @@
 <h3>Ports and Adapters</h3>
 <p>Ports sao interfaces e Adapters sao implementacoes.</p>
 <p>A interface e injetada em que esta começando a consumir. Outro conceito importante e que a Core e blindada, ou seja, essas camada nao precisa conhecer, saber oque acontece com as outras camadas. </p>
+<p>Cada camada pode ser observada como programas diferentes que conversam entre si, por isso pode haver repetição de dados principalmente enre os modelos e dto's.</p>
 
 <h3>Exemplo1 projeto arquiteturamodelo</h3>
 <p>No projeto arquiteturamodelo foi criado o pacote entrypoint que representa o Driver Side, ou seja o lado que vai receber requisicoes para consumir a aplicacao. Abaixo temos como ficou a essa parte da arquitetura:
