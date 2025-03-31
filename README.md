@@ -54,6 +54,37 @@ class ClientAdapter(
 
    ```
 
+2. A segunda opcao e criar um Map de Implementacoes
+
+
+```java
+
+    
+    @Service
+class ClientAdapter(
+    private val tokenPort: TokenPort,
+    private val dadosCadastraisPort: DadosCadastraisPort,
+    private val databasePort: Map<String, DatabasePort>
+) : EntrypointPort {
+    /*
+    receber o cpf via url
+    gerar token STS
+    buscar dados do cliente na api
+    persistir os dados do clinete em banco de dados local
+    * */
+    override fun getClientByCpf(cpf: String): ClientCore {
+        val token = tokenPort.getToken();
+        val clientCore = dadosCadastraisPort.getDadosCliente(
+            token.accessToken,
+            cpf
+        )
+        databasePort["oracleAdapter"]?.salvaDadosClient(clientCore)
+        return clientCore
+    }
+
+}
+
+   ```
 
 </p>
 
