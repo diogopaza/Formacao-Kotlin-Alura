@@ -25,7 +25,7 @@
 <h3>Uso de multiplas Interfaces no Spring</h3>
 <p>Um dos pontos que o projeto arquiteturamodelo aborda no curso e o fato de ser errado o uso de duas implementacoes de uma interface. Apos pesquisa observou-se ser possivel usar varias implementacoes de uma interface. Abaixo algumas maneiras de implementar com o Spring.
 
-1. A primeira opcao e usar a anotacao <strong>@Qualifier("nomeBeaan")</strong>:
+1. A primeira opcao e usar a anotacao <strong>@Qualifier("nomeBean")</strong>: na anotacao @Qualifier("oracleAdapter") e uma referencia a classe (implementcao) da interface DatabasePort, que neste exemplo pode ser OracleAdapter ou SqlAdapter, a anotacao @Qualifier define qual deve ser injetada.
 
 ```java
     @Service
