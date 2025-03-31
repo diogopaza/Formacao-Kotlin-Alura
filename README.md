@@ -27,7 +27,7 @@
 
 1. A primeira opcao e usar a anotacao <strong>@Qualifier("nomeBeaan")</strong>:
 
-   ´´´java
+```java
     @Service
 class ClientAdapter(
     private val tokenPort: TokenPort,
@@ -52,7 +52,7 @@ class ClientAdapter(
 
 }
 
-   ´´´
+   ```
 
 
 </p>
