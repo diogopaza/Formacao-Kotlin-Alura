@@ -25,7 +25,36 @@
 <h3>Uso de multiplas Interfaces no Spring</h3>
 <p>Um dos pontos que o projeto arquiteturamodelo aborda no curso e o fato de ser errado o uso de duas implementacoes de uma interface. Apos pesquisa observou-se ser possivel usar varias implementacoes de uma interface. Abaixo algumas maneiras de implementar com o Spring.
 
-1. A primeira opcao e usar a anotacao <strong>@Qualifier("nomeBeaan")</strong>.
+1. A primeira opcao e usar a anotacao <strong>@Qualifier("nomeBeaan")</strong>:
+
+   ´´´java
+    @Service
+class ClientAdapter(
+    private val tokenPort: TokenPort,
+    private val dadosCadastraisPort: DadosCadastraisPort,
+    @Qualifier("oracleAdapter") private val databasePort: DatabasePort
+) : EntrypointPort {
+    /*
+    receber o cpf via url
+    gerar token STS
+    buscar dados do cliente na api
+    persistir os dados do clinete em banco de dados local
+    * */
+    override fun getClientByCpf(cpf: String): ClientCore {
+        val token = tokenPort.getToken();
+        val clientCore = dadosCadastraisPort.getDadosCliente(
+            token.accessToken,
+            cpf
+        )
+        databasePort.salvaDadosClient(clientCore)
+        return clientCore
+    }
+
+}
+
+   ´´´
+
+
 </p>
 
 
