@@ -54,7 +54,7 @@ class ClientAdapter(
 
    ```
 
-2. A segunda opcao e criar um Map de Implementacoes
+2. A segunda opcao e criar um Map de Implementacoes: agora databasePort recebe um Map<String, DatabasePort> desse forma e possivel escolher qual implementacao usar, usando o seguinte codigo: databasePort["oracleAdapter"]?.salvaDadosClient(clientCore).
 
 
 ```java
