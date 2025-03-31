@@ -25,3 +25,8 @@
 <h3>Uso de multiplas Interfaces no Spring</h3>
 <p>Um dos pontos que o projeto arquiteturamodelo aborda no curso e o fato de ser errado o uso de duas implementacoes de uma interface. Apos pesquisa observou-se ser possivel usar varias implementacoes de uma interface. Abaixo algumas maneiras de implementar com o Spring.</p>
 
+
+
+<h4>Referencias</h4>
+
+<p><sub>Youtube - DevEduardoAlbuquerque - <a href="https://www.youtube.com/watch?v=_3aZCs8IGGQ&list=PLRHt7FXZbVCQmSscfVQVKT_gegPHurnHs&index=1">Treinamento Arquitetura Hexagonal</a></sub></p>
