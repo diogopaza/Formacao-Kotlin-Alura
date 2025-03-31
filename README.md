@@ -29,4 +29,4 @@
 
 <h4>Referencias</h4>
 
-<p><sub>Youtube - DevEduardoAlbuquerque - <a href="https://www.youtube.com/watch?v=_3aZCs8IGGQ&list=PLRHt7FXZbVCQmSscfVQVKT_gegPHurnHs&index=1">Treinamento Arquitetura Hexagonal</a></sub></p>
+<p><sub>Youtube - DevEduardoAlbuquerque - Projeto usado arquiteturamodelo (sofrendo alteracoes da versao original para testes deste repositorio) <a href="https://www.youtube.com/watch?v=_3aZCs8IGGQ&list=PLRHt7FXZbVCQmSscfVQVKT_gegPHurnHs&index=1">Treinamento Arquitetura Hexagonal</a></sub></p>
