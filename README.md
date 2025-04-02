@@ -89,7 +89,7 @@ class ClientAdapter(
 </p>
 
 <h3>Tratamento de erros no Kotlin</h3>
-<p>O tratamento de erros e excecoes pode ser usando o <emph>Try/Catch</emph> do Java ou com o runCatching, este oferece algumas opcoes mais personalizaas de tratamento conforme codigo abaixo. E possivel notar que o codigo que pode apresentar algum erro esta dentro das chaves do runCatching. E mais abaixo o runCathing possui metodos para tratamento em caso de erro ou uma sequencia de acoes em caso de sucesso.
+<p>O tratamento de erros e excecoes pode ser usando o <emph>Try/Catch</emph> do Java ou com o runCatching, este oferece algumas opcoes mais personalizaas de tratamento conforme codigo abaixo. E possivel notar que o codigo que pode apresentar algum erro esta dentro das chaves do runCatching. E mais abaixo o runCathing possui metodos para tratamento em caso de erro ou uma sequencia de acoes em caso de sucesso. O runCatching e uma opcao interessante pois com seu uso existe a possibilidade de nao se interromper o fluxo de execucao e salvar o seu resultado para ser trabalhado em caso de sucesso ou falha.
 
   ```java
   //Usando runCatchinf
