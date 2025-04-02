@@ -88,6 +88,57 @@ class ClientAdapter(
 
 </p>
 
+<h3>Tratamento de erros no Kotlin</h3>
+<p>O tratamento de erros e excecoes pode ser usando o <emph>Try/Catch</emph> do Java ou com o runCatching, este oferece algumas opcoes mais personalizaas de tratamento conforme codigo abaixo. E possivel notar que o codigo que pode apresentar algum erro esta dentro das chaves do runCatching. E mais abaixo o runCathing possui metodos para tratamento em caso de erro ou uma sequencia de acoes em caso de sucesso.
+
+  ```java
+  //Usando runCatchinf
+    val resultado = runCatching {
+        val request = HttpRequest.newBuilder()
+            .uri(URI.create("https://www.cheapshark.com/api/1.0/games?id=$id"))
+            .build()
+        val response = client
+            .send(request, BodyHandlers.ofString())
+        json = response.body();
+        println(json)
+        val gson = Gson()
+
+        val infoJogo = gson.fromJson(json, InfoJogo::class.java)
+        //val info = gson.fromJson(json, Info::class.java)
+        //println(info)
+        meuJogo = Jogo(
+            infoJogo.info.title,
+            infoJogo.info.thumb
+        )
+    }
+
+    resultado.onFailure {
+        println("Jogo inexistente. Tente outro id")
+    }
+
+    resultado.onSuccess {
+        println("Deseja mudar a descricao do jogo: sim(s) ou  nao(n)")
+        val mudardescricao = scan.nextLine()
+        if(mudardescricao.equals("s", true)){
+            println("Digite a nova descricao")
+            val novaDescricao = scan.nextLine()
+            meuJogo?.descricao = novaDescricao
+        } else {
+            println("A descricao tera o mesmo nome do titulo")
+            meuJogo?.descricao = meuJogo.titulo
+        }
+    }
+    println(meuJogo)
+  
+
+  ```
+
+
+
+
+</p>
+
+
 
 
 <h4>Referencias</h4>
